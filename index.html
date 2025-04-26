@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print3DSyria.com - Your Premier 3D Printing Service in Syria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+        
+        .material-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link:hover .nav-line {
+            width: 100%;
+        }
+        
+        .nav-line {
+            height: 2px;
+            width: 0;
+            transition: width 0.3s ease;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 lg:px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">Print3DSyria</a>
+                <div class="hidden lg:flex ml-10 space-x-1">
+                    <a href="#home" class="nav-link px-4 py-2 text-gray-700 hover:text-indigo-600 relative">
+                        Home
+                        <div class="nav-line"></div>
+                    </a>
+                    <a href="#services" class="nav-link px-4 py-2 text-gray-700 hover:text-indigo-600 relative">
+                        Services
+                        <div class="nav-line"></div>
+                    </a>
+                    <a href="#pricing" class="nav-link px-4 py-2 text-gray-700 hover:text-indigo-600 relative">
+                        Pricing
+                        <div class="nav-line"></div>
+                    </a>
+                    <div class="dropdown relative">
+                        <button class="nav-link px-4 py-2 text-gray-700 hover:text-indigo-600 flex items-center">
+                            Resources
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            <div class="nav-line"></div>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-md shadow-xl z-50">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Tutorials</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden md:block px-4 py-2 text-gray-700 hover:text-indigo-600">
+                    <i class="fas fa-envelope mr-1"></i> Contact
+                </a>
+                <a href="tel:+963123456789" class="hidden md:block px-4 py-2 text-gray-700 hover:text-indigo-600">
+                    <i class="fas fa-phone mr-1"></i> Call Us
+                </a>
+                <button onclick="openOrderModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition duration-300">
+                    <i class="fas fa-cube mr-1"></i> Order Now
+                </button>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2">
+                <a href="#home" class="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded">Home</a>
+                <a href="#services" class="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded">Services</a>
+                <a href="#pricing" class="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded">Pricing</a>
+                <a href="#contact" class="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded">Contact</a>
+                <a href="#" class="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded">Blog</a>
+                <a href="#" class="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient py-20">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 lg:pr-10 mb-10 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                        Bring Your Ideas to Life with <span class="gradient-text">3D Printing</span> in Syria
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        High-quality 3D printing services for professionals, hobbyists, and businesses across Syria. Fast turnaround, competitive prices, and expert support.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <button onclick="openOrderModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md font-medium transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-cube mr-2"></i> Start Your Project Now
+                        </button>
+                        <a href="#services" class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-md font-medium transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-search mr-2"></i> Explore Services
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Customer">
+                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/34.jpg" alt="Customer">
+                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/55.jpg" alt="Customer">
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm text-gray-600">Trusted by over <span class="font-bold">500+</span> customers</p>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <span class="ml-1 text-sm text-gray-500">(4.9/5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="3D Printer" class="rounded-xl shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg w-2/3">
+                            <div class="flex items-center">
+                                <div class="bg-indigo-100 p-3 rounded-full mr-3">
+                                    <i class="fas fa-bolt text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900">Fast Delivery</h3>
+                                    <p class="text-sm text-gray-600">Get your prints in 2-5 business days</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-5 -right-5 bg-white p-4 rounded-lg shadow-lg w-2/3 text-right">
+                            <div class="flex items-center justify-end">
+                                <div>
+                                    <h3 class="font-bold text-gray-900">20+ Materials</h3>
+                                    <p class="text-sm text-gray-600">PLA, ABS, PETG, and more</p>
+                                </div>
+                                <div class="bg-indigo-100 p-3 rounded-full ml-3">
+                                    <i class="fas fa-layer-group text-indigo-600"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <!-- <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-6">
+            <h3 class="text-center text-sm font-semibold text-gray-500 mb-6">TRUSTED BY COMPANIES ACROSS SYRIA</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+                <img src="https://via.placeholder.com/140x40?text=Damascus+Uni" alt="Damascus University" class="h-8">
+                <img src="https://via.placeholder.com/140x40?text=Syriatel" alt="Syriatel" class="h-8">
+                <img src="https://via.placeholder.com/140x40?text=MTN" alt="MTN" class="h-8">
+                <img src="https://via.placeholder.com/140x40?text=Arab+Med" alt="Arab Medical" class="h-8">
+                <img src="https://via.placeholder.com/140x40?text=Al+Bacha" alt="Al Bacha" class="h-6">
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Services Section -->
+    
+
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Professional <span class="gradient-text">3D Printing Services in Damascus</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Premium 3D printing solutions for businesses, engineers, and educators across Syria. Fast turnaround, competitive pricing, and expert support.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="bg-indigo-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cubes text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Rapid Prototyping in Syria</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transform your concepts into physical prototypes within 24-48 hours using our advanced 3D printers in Damascus. Perfect for product designers and startups.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Same-day quotes for Damascus clients</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">PLA, ABS, and resin materials available</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Free design consultation</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center">
+                        Get Prototype Quote <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="bg-indigo-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-industry text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Industrial 3D Printing Syria</h3>
+                    <p class="text-gray-600 mb-4">
+                        High-strength production parts for manufacturing, automotive, and medical sectors in Damascus. Durable materials with precision engineering.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Engineering-grade materials (Nylon, PETG, TPU)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Sanding, painting, and assembly services</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Bulk orders with 15% discount</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center">
+                        Request Production Samples <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="bg-indigo-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Educational 3D Printing Syria</h3>
+                    <p class="text-gray-600 mb-4">
+                        Specialized 3D printing services for universities, schools, and STEM programs across Syria. Academic discounts available.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">30% discount for educational institutions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Curriculum-aligned 3D models</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">On-site training in Damascus</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center">
+                        School Program Info <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- About Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80" alt="Our 3D Printing Lab" class="rounded-xl shadow-xl w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About <span class="gradient-text">Print3DSyria</span></h2>
+                    <p class="text-gray-600 mb-6">
+                        Founded in 2024, Print3DSyria is the leading 3D printing service provider in Syria, dedicated to bringing the latest additive manufacturing technologies to businesses, educators, and individuals across the country.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-medal text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Quality Assurance</h4>
+                                <p class="text-gray-600">Every print is inspected for quality before delivery to ensure it meets our high standards.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-headset text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Expert Support</h4>
+                                <p class="text-gray-600">Our team of 3D printing specialists is available to assist with your projects.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-truck text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Nationwide Delivery</h4>
+                                <p class="text-gray-600">We deliver to all major cities in Syria including Damascus, Aleppo, and Homs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Competitive pricing for all your 3D printing needs with no hidden fees.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Basic</h3>
+                            <p class="text-gray-600">For simple projects and prototypes</p>
+                        </div>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-md">Popular</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">25,000 SYP</span>
+                        <span class="text-gray-600">/ 100g</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">PLA Material</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Standard Resolution (200μm)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">5-7 Business Day Delivery</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-2"></i>
+                            <span>Post-processing</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-2"></i>
+                            <span>Priority Support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="material-card bg-white rounded-xl p-6 border-2 border-indigo-600 transform scale-105">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Professional</h3>
+                            <p class="text-gray-600">For quality-focused projects</p>
+                        </div>
+                        <span class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded-md">Best Value</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">40,000 SYP</span>
+                        <span class="text-gray-600">/ 100g</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">ABS, PETG, or TPU Materials</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">High Resolution (100μm)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">3-5 Business Day Delivery</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Basic Post-processing</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-2"></i>
+                            <span>Priority Support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Enterprise</h3>
+                            <p class="text-gray-600">For demanding production needs</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">60,000 SYP</span>
+                        <span class="text-gray-600">/ 100g</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Any Material (Including Nylon, PC)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Ultra Resolution (50μm)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">1-3 Business Day Delivery</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Advanced Post-processing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Priority Support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Need custom pricing for bulk orders?</p>
+                <button class="text-indigo-600 font-medium hover:text-indigo-700 border-b border-indigo-600 pb-1">
+                    Contact our sales team <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our <span class="gradient-text">Customers</span> Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it. Here's what our customers have to say about our services.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <!-- <img class="w-12 h-12 rounded-full mr-4" src="" alt="Sarah K."> -->
+                        <div>
+                            <h4 class="font-bold text-gray-900">Sarah K.</h4>
+                            <p class="text-gray-600 text-sm">Engineering Student, Damascus University</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "As an engineering student, I frequently need prototypes for my projects. Print3DSyria delivers high-quality prints with quick turnaround times. Their customer support is exceptional - they even helped optimize my designs for better printing!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <!-- <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mohammad A."> -->
+                        <div>
+                            <h4 class="font-bold text-gray-900">Mohammad A.</h4>
+                            <p class="text-gray-600 text-sm">Product Designer, Aleppo</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "I've tried several 3D printing services in Syria, and Print3DSyria stands out for their consistency and quality. Their attention to detail is remarkable, and they've become my go-to for all my product development needs."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="material-card bg-white rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <!-- <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/68.jpg" alt="Ali H."> -->
+                        <div>
+                            <h4 class="font-bold text-gray-900">Ali H.</h4>
+                            <p class="text-gray-600 text-sm">Small Business Owner, Homs</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "Print3DSyria helped me bring my product ideas to life without breaking the bank. Their bulk order discounts allowed me to test the market with prototypes before scaling production. Highly recommended for entrepreneurs!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Have questions? We've got answers. If you don't see what you're looking for, feel free to contact us.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition duration-200">
+                            <span class="font-medium text-gray-900">What file formats do you accept for 3D printing?</span>
+                            <i class="fas fa-plus text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden bg-white">
+                            <p class="text-gray-600">
+                                We accept most common 3D file formats including STL, OBJ, and 3MF. For best results, we recommend using STL files with a resolution appropriate for your print size (higher resolution for smaller, detailed prints). Our team can help optimize your files if needed.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition duration-200">
+                            <span class="font-medium text-gray-900">How long does shipping take within Syria?</span>
+                            <i class="fas fa-plus text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden bg-white">
+                            <p class="text-gray-600">
+                                Shipping times vary by location within Syria. For Damascus, delivery typically takes 1 day after printing is complete. Other major cities (Aleppo, Homs, Latakia) usually receive their orders in 2-3 days. More remote areas may take up to 5 business days. Expedited shipping is available for an additional fee.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition duration-200">
+                            <span class="font-medium text-gray-900">What payment methods do you accept?</span>
+                            <i class="fas fa-plus text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden bg-white">
+                            <p class="text-gray-600">
+                                We accept cash on delivery for most locations in Syria. For larger orders, we also accept bank transfers. We're currently working to add online payment options for added convenience. Please contact us for international payment options if you're ordering from outside Syria.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition duration-200">
+                            <span class="font-medium text-gray-900">Can I get a discount for bulk orders?</span>
+                            <i class="fas fa-plus text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden bg-white">
+                            <p class="text-gray-600">
+                                Yes! We offer volume discounts for orders over 1kg of printed material. The discount increases with order size, with the largest discounts available for orders over 5kg. For the most accurate pricing, please contact our sales team with your project details for a custom quote.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition duration-200">
+                            <span class="font-medium text-gray-900">Do you offer design services for those without 3D models?</span>
+                            <i class="fas fa-plus text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden bg-white">
+                            <p class="text-gray-600">
+                                Absolutely! Our in-house design team can help bring your ideas to life. Whether you have sketches, descriptions, or just a concept, we can create a 3D model suitable for printing. Design fees vary based on complexity - contact us with your requirements for a quote.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600 mb-4">Still have questions?</p>
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i> Contact Our Support Team
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-indigo-600">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Bring Your Ideas to Life?</h2>
+                <p class="text-lg text-indigo-100 mb-8">
+                    Whether you're an engineer, designer, educator, or hobbyist, we're here to help you turn your concepts into tangible, high-quality 3D printed objects.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                    <button onclick="openOrderModal()" class="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-cube mr-2"></i> Get a Free Quote
+                    </button>
+                    <a href="tel:+963123456789" class="border border-white text-white hover:bg-indigo-700 px-6 py-3 rounded-md font-medium transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i> Call Us Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Get in <span class="gradient-text">Touch</span></h2>
+                    <p class="text-gray-600 mb-8">
+                        Have a question about our services or want to discuss a project? Our team is here to help you with all your 3D printing needs.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Our Location</h4>
+                                <p class="text-gray-600">Al-Mazzeh, Damascus, Syria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Call Us</h4>
+                                <p class="text-gray-600">+963 123 456 789</p>
+                                <p class="text-gray-600">+963 987 654 321</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Email Us</h4>
+                                <p class="text-gray-600">info@print3dsyria.com</p>
+                                <p class="text-gray-600">support@print3dsyria.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Working Hours</h4>
+                                <p class="text-gray-600">Sunday - Thursday: 9:00 AM - 5:00 PM</p>
+                                <p class="text-gray-600">Friday - Saturday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-900 mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="material-card bg-white rounded-xl p-6 lg:p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md font-medium w-full transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900">3D Print Order Request</h3>
+                    <button onclick="closeOrderModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form>
+                    <div class="space-y-4 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="order-name" class="block text-gray-700 font-medium mb-1">Name</label>
+                                <input type="text" id="order-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="order-phone" class="block text-gray-700 font-medium mb-1">Phone</label>
+                                <input type="tel" id="order-phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="order-email" class="block text-gray-700 font-medium mb-1">Email</label>
+                            <input type="email" id="order-email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div>
+                            <label for="order-file" class="block text-gray-700 font-medium mb-1">Upload 3D File (STL, OBJ)</label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                <div class="space-y-1 text-center">
+                                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none">
+                                            <span>Upload a file</span>
+                                            <input id="file-upload" name="file-upload" type="file" class="sr-only" accept=".stl,.obj,.3mf">
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">STL, OBJ, 3MF up to 10MB</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Material Preference</label>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="material" value="PLA" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">PLA (Standard)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="material" value="ABS" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">ABS</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="material" value="PETG" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">PETG</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="material" value="TPU" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">TPU (Flexible)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="material" value="Other" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">Other</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Print Quality</label>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="quality" value="standard" checked class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">Standard (200μm)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="quality" value="high" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">High (100μm)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="quality" value="ultra" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">Ultra (50μm)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="order-notes" class="block text-gray-700 font-medium mb-1">Additional Notes</label>
+                            <textarea id="order-notes" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-end space-x-3">
+                        <button type="button" onclick="closeOrderModal()" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
+                            Cancel
+                        </button>
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md">
+                            Submit Order Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="container mx-auto px-4 lg:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Print3DSyria</h3>
+                    <p class="mb-4">
+                        Your premier 3D printing service provider in Syria, offering high-quality prints with quick turnaround times.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">3D Printing</a></li>
+                        <li><a href="#" class="hover:text-white">Rapid Prototyping</a></li>
+                        <li><a href="#" class="hover:text-white">Production Parts</a></li>
+                        <li><a href="#" class="hover:text-white">3D Scanning</a></li>
+                        <li><a href="#" class="hover:text-white">Design Services</a></li>
+                        <li><a href="#" class="hover:text-white">Post-processing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Our Team</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
+                    <address class="not-italic">
+                        <p class="mb-2">Al-Mazzeh, Damascus</p>
+                        <p class="mb-2">Syria</p>
+                        <p class="mb-2">+963 123 456 789</p>
+                        <p class="mb-4">info@print3dsyria.com</p>
+                        <p>Sunday - Thursday: 9AM - 5PM</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 Print3DSyria. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Toggle icon
+                if (answer.classList.contains('hidden')) {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                } else {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            });
+        });
+        
+        // Order modal functions
+        function openOrderModal() {
+            document.getElementById('order-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeOrderModal() {
+            document.getElementById('order-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('order-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeOrderModal();
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Scroll animation for elements
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.material-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Initially hide animated elements
+        document.querySelectorAll('.material-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        // Run on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
